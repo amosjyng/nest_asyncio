@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install flake8 mypy .
+          pip install flake8 mypy pytest .
 
       - name: Flake8 static code analysis
         run:
@@ -42,6 +42,6 @@ jobs:
 
       - name: Testsuite
         run: |
-          python tests/nest_test.py
+          pytest
 
 
